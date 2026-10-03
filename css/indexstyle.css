@@ -36,6 +36,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--text-base);
   line-height: 1.6;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--color-surface);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-background);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--space-4);
 }
 
 main {
@@ -72,7 +90,7 @@ h2 {
 }
 
 p {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   margin-block-start: var(--space-4);
   margin-block-end: var(--space-4);
 }
@@ -93,10 +111,10 @@ a {
   background: var(--color-primary);
 }
 
-nav-btn {
+.nav-btn {
   background: var(--color-primary);
   color: var(--color-surface);
-  border: 6px solid var(--color-primary);
+  border: 5px solid var(--color-primary);
   border-radius: 50px;
   border-width: 2px;
   padding: var(--space-2) var(--space-4);
@@ -104,7 +122,7 @@ nav-btn {
   margin-block-end: var(--space-4);
   
 }
-nav-btn:hover {
+.nav-btn:hover {
   background: transparent;
   color: var(--color-primary);
 }

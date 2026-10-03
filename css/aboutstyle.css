@@ -72,7 +72,7 @@ h2 {
 }
 
 p {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   margin-block-start: var(--space-4);
   margin-block-end: var(--space-4);
 }
@@ -93,7 +93,7 @@ a {
   background: var(--color-primary);
 }
 
-nav-btn {
+.nav-btn {
   background: var(--color-primary);
   color: var(--color-surface);
   border: 6px solid var(--color-primary);
@@ -104,7 +104,7 @@ nav-btn {
   margin-block-end: var(--space-4);
   
 }
-nav-btn:hover {
+.nav-btn:hover {
   background: transparent;
   color: var(--color-primary);
 }

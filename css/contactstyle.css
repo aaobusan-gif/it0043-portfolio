@@ -96,7 +96,7 @@ h6 {
 }
 
 p {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   margin-block-start: var(--space-4);
   margin-block-end: var(--space-4);
 }
@@ -145,7 +145,7 @@ a {
   background: var(--color-primary);
 }
 
-nav-btn {
+.nav-btn {
   background: var(--color-primary);
   color: var(--color-surface);
   border: 6px solid var(--color-primary);
@@ -156,7 +156,7 @@ nav-btn {
   margin-block-end: var(--space-4);
   
 }
-nav-btn:hover {
+.nav-btn:hover {
   background: transparent;
   color: var(--color-primary);
 }
@@ -206,4 +206,25 @@ footer p {
         text-align: center;
         width: 100%;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .nav-btn {
+    transition: none;
+  }
+
+  .nav-btn:hover,
+  .nav-btn:focus-visible,
+  .nav-btn:active {
+    transform: none;
+  }
 }
