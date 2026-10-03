@@ -125,3 +125,25 @@ footer p {
   margin-left: var(--space-4);
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    
+    .nav-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
