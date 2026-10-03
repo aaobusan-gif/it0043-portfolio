@@ -81,20 +81,18 @@ a {
   color: var(--color-primary);
 }
 
-.nav-link,
-nav a {
+.nav-link {
   text-decoration: none;
   color: var(--color-primary);
   font-size: var(--text-xl);
   margin-left: var(--space-4);
 }
-.nav-link:hover,
-nav a:hover {
+.nav-link:hover {
   color: var(--color-surface);
   background: var(--color-primary);
 }
 
-nav a.nav-btn {
+nav-btn {
   background: var(--color-primary);
   color: var(--color-surface);
   border: 6px solid var(--color-primary);
@@ -105,7 +103,8 @@ nav a.nav-btn {
   margin-block-end: var(--space-4);
   
 }
-nav a.nav-btn:hover {
+
+nav-btn:hover {
   background: transparent;
   color: var(--color-primary);
 }
