@@ -2,7 +2,7 @@
   --color-background: #ebf4e6;
   --color-surface: #ffffff;
   --color-text: #2d3122;
-  --color-muted: #4a5430;
+  --color-muted: #4a5430; 
   --color-primary: #4e5b2e;
   --color-primary-dark: #404a24;
   --color-border: #404a24;
@@ -49,6 +49,9 @@ main {
 
 h1,
 h2,
+h3,
+h4,
+h6,
 p {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -57,6 +60,9 @@ p {
 
 h1,
 h2,
+h3,
+h4,
+h6,
 p {
   line-height: 1.2;
 }
@@ -71,6 +77,24 @@ h2 {
   margin-block-end: var(--space-2);
 }
 
+h3 {
+  font-size: var(--text-lg);
+  margin-block-start: var(--space-2);
+  margin-block-end: var(--space-2);
+}
+
+h4 {
+  font-size: var(--text-base);
+  margin-block-start: var(--space-2);
+  margin-block-end: var(--space-2);
+}
+
+h6 {
+  font-size: var(--text-sm);
+  margin-block-start: var(--space-2);
+  margin-block-end: var(--space-2);
+}
+
 p {
   font-size: var(--text-base);
   margin-block-start: var(--space-4);
@@ -81,13 +105,41 @@ a {
   color: var(--color-primary);
 }
 
+.a-link,
+ a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: var(--text-xl);
+  margin-left: var(--space-4);
+}
+.a-link:hover,
+ a:hover {
+  color: var(--color-surface);
+  background: var(--color-primary);
+}
+
+.a-btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: 6px solid var(--color-primary);
+  border-radius: 50px;
+  border-width: 2px;
+  padding: var(--space-2) var(--space-4);
+  margin-block-start: var(--space-4);
+  margin-block-end: var(--space-4);
+}
+.a-btn:hover {
+  background: transparent;
+  color: var(--color-primary);
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--color-primary);
   font-size: var(--text-xl);
   margin-left: var(--space-4);
 }
-
 .nav-link:hover {
   color: var(--color-surface);
   background: var(--color-primary);
@@ -109,6 +161,15 @@ a {
   color: var(--color-primary);
 }
 
+.box,
+.form-container {
+  background: var(--color-surface);
+  padding: var(--space-4);
+  border-radius: var(--space-2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: var(--space-4) auto;
+}
 
 footer {
   padding-block: var(--space-4);
@@ -145,4 +206,25 @@ footer p {
         text-align: center;
         width: 100%;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .nav-btn {
+    transition: none;
+  }
+
+  .nav-btn:hover,
+  .nav-btn:focus-visible,
+  .nav-btn:active {
+    transform: none;
+  }
 }
